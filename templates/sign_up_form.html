@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="tags">
+  <h3>Create Account with us<br> <span class="spans"></span></h3>
+  <p class="paras-subtopics">Join the Large Community of Eswatini's Young People and Showcase Your Skills & Abilities Today;
+  <div class="form_container">
+    <div class="row justify-content-center">
+    <div class="col-md-5">
+     <div class="card">
+       <h2 class="card-title text-center">Register</h2>
+        <div class="card-body py-md-4">
+         <form _lpchecked="1" action="" method="post">
+
+            <div class="form-group">
+
+                {{   register.name(class="form-control",placeholder="Name")}}
+               <!--<input type="text" class="form-control" id="name" name="nm" placeholder="Name">-->
+              </div>
+              <div class="form-group">
+                  {{ register.email(class="form-control",placeholder="Email")}}
+                <!--<input type="email" class="form-control" id="email" name="email" placeholder="Email">-->
+              </div>
+             <div class="form-group">
+                 {{ register.password(class="form-control",placeholder="Password")}}
+               <!--<input type="password" class="form-control" id="password" name="passw" placeholder="Password">-->
+             </div>
+             <div class="form-group">
+                <!--<input type="password" class="form-control" id="confirm-password" name="confirm_pass" placeholder="confirm-password">-->
+                 {{ register.confirm(class="form-control",placeholder="Confirm Password")}}
+             </div>
+
+             <div class="d-flex flex-row align-items-center justify-content-between">
+                 {{ register.submit(class="btns") }}
+                 <!--<input class="btns" type="submit" value="Create Account" />-->
+                 <a class="form-a links" href="#">Login instead?</a>
+            </div>
+         </form>
+       </div>
+    </div>
+  </div>
+  </div>
+  </div>
+{% endblock %}
